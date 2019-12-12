@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="employeeDetails" targetNamespace="http://192.168.7.15/Pkg_Pavan_LmTopics.webServices.Wsdl:employeeDetails" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soapjms="http://www.w3.org/2010/soapjms/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://192.168.7.15/Pkg_Pavan_LmTopics.webServices.Wsdl:employeeDetails" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://192.168.7.15/Pkg_Pavan_LmTopics.webServices.Wsdl:employeeDetails" xmlns:tns="http://192.168.7.15/Pkg_Pavan_LmTopics.webServices.Wsdl:employeeDetails" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+          <xsd:element name="insertEmployeeTable" type="tns:insertEmployeeTable"/>
+          <xsd:element name="insertEmployeeTableResponse" type="tns:insertEmployeeTableResponse"/>
+          <xsd:complexType name="insertEmployeeTable">
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="EmployeeDetails" nillable="true" type="tns:EmployeeDetails"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="EmployeeDetails">
+            <xsd:sequence>
+              <xsd:element name="EmployeeDetails" nillable="true" type="tns:EmployeeDetails2"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="EmployeeDetails2">
+            <xsd:sequence>
+              <xsd:element name="Name" nillable="true" type="xsd:string"/>
+              <xsd:element name="Id" nillable="true" type="xsd:string"/>
+              <xsd:element name="Designation" nillable="true" type="xsd:string"/>
+              <xsd:element name="Organization" nillable="true" type="xsd:string"/>
+              <xsd:element name="Salary" nillable="true" type="xsd:string"/>
+              <xsd:element name="ADDRESSPERMANENTCITY" nillable="true" type="xsd:string"/>
+              <xsd:element name="ADDRESSPERMANENTSTATE" nillable="true" type="xsd:string"/>
+              <xsd:element name="ADDRESSPERMANENTZIPCODE" nillable="true" type="xsd:string"/>
+              <xsd:element name="DATEOFJOINING" nillable="true" type="xsd:string"/>
+              <xsd:element name="REMARKS" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+          <xsd:complexType name="insertEmployeeTableResponse">
+            <xsd:sequence>
+              <xsd:element name="result" nillable="true" type="xsd:string"/>
+              <xsd:element name="failureReason" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        	</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="employeeDetails_PortType_insertEmployeeTable">
+    <wsdl:part name="parameters" element="tns:insertEmployeeTable">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="employeeDetails_PortType_insertEmployeeTableResponse">
+    <wsdl:part name="parameters" element="tns:insertEmployeeTableResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="employeeDetails_PortType">
+    <wsdl:operation name="insertEmployeeTable">
+      <wsdl:input message="tns:employeeDetails_PortType_insertEmployeeTable">
+    </wsdl:input>
+      <wsdl:output message="tns:employeeDetails_PortType_insertEmployeeTableResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Pkg_Pavan_LmTopics_webServices_Wsdl_employeeDetails_Binder" type="tns:employeeDetails_PortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="insertEmployeeTable">
+      <soap:operation soapAction="Pkg_Pavan_LmTopics_webServices_Wsdl_employeeDetails_Binder_insertEmployeeTable" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Pkg_Pavan_LmTopics.webServices.Wsdl.employeeDetails">
+    <wsdl:port name="Pkg_Pavan_LmTopics_webServices_Wsdl_employeeDetails_Port" binding="tns:Pkg_Pavan_LmTopics_webServices_Wsdl_employeeDetails_Binder">
+      <soap:address location="http://192.168.7.15:2424/ws/Pkg_Pavan_LmTopics.webServices.Wsdl:employeeDetails/Pkg_Pavan_LmTopics_webServices_Wsdl_employeeDetails_Port"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

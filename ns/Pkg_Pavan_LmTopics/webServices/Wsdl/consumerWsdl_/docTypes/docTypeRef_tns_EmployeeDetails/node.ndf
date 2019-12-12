@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <record name="record" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_nsName">Pkg_Pavan_LmTopics.webServices.Wsdl.consumerWsdl_.docTypes:docTypeRef_tns_EmployeeDetails</value>
+    <value name="node_pkg">Pkg_Pavan_LmTopics</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <value name="schemaDomain">af1e7faa010bf88e16ee15bfb83</value>
+    <value name="docTypeDomain">0465c19d1c714f43a8c37b7b5a57f863</value>
+    <value name="originURI">file://C:\Users\abcde\Desktop\pdfs folder\Pkg_Pavan_LmTopics.webServices.xml</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">EmployeeDetails</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">Pkg_Pavan_LmTopics.webServices.Wsdl.consumerWsdl_.docTypes:docTypeRef_tns_EmployeeDetails2</value>
+      </record>
+    </array>
+    <record name="schemaType" javaclass="com.wm.util.Values">
+      <value name="xmlns">http://192.168.7.15/Pkg_Pavan_LmTopics.webServices.Wsdl:employeeDetails</value>
+      <value name="ncName">EmployeeDetails</value>
+    </record>
+    <value name="schemaRegistered">true</value>
+    <value name="modifiable">false</value>
+  </record>
+</Values>
